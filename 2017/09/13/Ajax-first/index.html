@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="theme-color" content="#33474d">
+	<title>Ajax first | Xavier</title>
+	
+	<link rel="stylesheet" href="/Jokevil.github.io/css/style.css" />
+	
+      <link rel="alternate" href="/atom.xml" title="Xavier" type="application/atom+xml">
+    
+  
+</head>
+
+<body>
+    
+	<header class="header">
+
+		<nav class="header__nav">
+			
+				<a href="/archives" class="header__link">Archive</a>
+			
+				<a href="/tags" class="header__link">Tags</a>
+			
+				<a href="/atom.xml" class="header__link">RSS</a>
+			
+		</nav>
+		<h1 class="header__title"><a href="/Jokevil.github.io/">Xavier</a></h1>
+		<h2 class="header__subtitle">tell you something about my story</h2>
+	</header>
+	<main>
+		<article>
+	
+		<h1>Ajax first</h1>
+	
+	<div class="article__infos">
+		<span class="article__date">2017-09-13</span><br />
+		
+		
+	</div>
+
+	
+
+	
+		<h3 id="Ajax-的一些知识点"><a href="#Ajax-的一些知识点" class="headerlink" title="Ajax 的一些知识点"></a>Ajax 的一些知识点</h3><p>PS:详情参考<a href="http://www.cnblogs.com/chenshishuo/p/4919224.html" title="博客" target="_blank" rel="external">http://www.cnblogs.com/chenshishuo/p/4919224.html</a>   </p>
+<ol>
+<li>同源策略<br>请求的url地址，必须要和本机浏览器的出于同域，=&gt;协议，域名，端口完全相同  </li>
+<li>跨域：<br>原因：浏览器对JS 的同源策略的限制<br>为什么要限制：如果能随意访问数据和js文件，网站会变的很不安全。<br>同源策略导致：a.cn的js不能访问b.cn下的js的对象、数据。   </li>
+<li>JSONP实现跨域<br>全称：json for padding，是为了解决跨域请求资源而产生的解决方案,是一种依靠开发人员创造出的一种非官方跨域数据交互协议。<br>原理：<br>（1）AJAX直接请求普通文件存在跨域无权限访问的问题,不管是静态页面也好<br>（2）特例：调用js文件的时候又不受跨域影响,比如引入jquery框架时<br>凡是拥有scr这个属性的标签都可以跨域例如script。img。iframe。<br>（3）可以利用这个特性将数据存放在JS文件中通过src请求<br>（4）JSON是一个轻量级的数据格式，且被js原生支持！！！   </li>
+<li><p>重点：该协议的一个要点就是允许用户传递一个callback 参数给服务端！！！！<br>eg: 在<a href="http://a.com" target="_blank" rel="external">http://a.com</a> 请求 <a href="http://b.com/b.php" target="_blank" rel="external">http://b.com/b.php</a><br>把回调函数传过去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">var afunc= function(data)&#123;</div><div class="line">       alert(data);</div><div class="line">   &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">var url = &quot;http://b.com/b.php?callback=afunc&quot;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>5.Jquery的跨域封装 （只有get请求才能跨域）</p>
+</li>
+</ol>
+
+	
+
+	
+		<span class="different-posts"><a href="/Jokevil.github.io/2017/09/13/Ajax-first/" onclick="window.history.go(-1); return false;">⬅️ Go back </a></span>
+
+	
+
+</article>
+
+
+	</main>
+	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=474944320&auto=1&height=430"></iframe>
+
+	<footer class="footer">
+	<div class="footer-content">
+		
+	      <div class="footer__element">
+	<p>Hi there, <br />welcome to my Blog, <br /> 
+	  thanks for watching<br /> 
+	  and having a good time. <br /> 
+	</p>
+</div>
+
+	    
+	      <div class="footer__element">
+	<h5>Check out</h5>
+	<ul class="footer-links"> 
+		<li class="footer-links__link"><a href="http://weibo.com/2677896252/profile?topnav=1&wvr=6&is_all=1">Sina </a></li> 
+	</ul>
+</div>
+
+	    
+
+		<div class="footer-credit">
+			<p>© 2018 Xavier </p>
+			<span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_pv"></span> 人次 |</span>
+			<span id="lovingdays"></span> 
+			<span id="showdays"></span> 
+		</div>
+	</div>
+</footer>
+<script>
+        const birthDay = new Date('5/18/2017 18:34:23');
+        const startDay = new Date('5/24/2016 00:05:24');
+        window.onload=setInterval(function() {
+            var now = new Date();
+            var num_1 = 1000 * 60 * 60 * 24;
+            var num_2 = 1000 * 60 * 60;
+            var num_3 = 1000 * 60;
+            var duration = now.getTime() - birthDay.getTime();
+            var love = now.getTime() - startDay.getTime();
+            var lonvingdays = Math.floor(love / num_1);
+            var day = Math.floor(duration / num_1);
+            var hour = Math.floor((duration % num_1) / num_2);
+            var minute = Math.floor(((duration % num_1) % num_2) / num_3);
+            var second = Math.floor((((duration % num_1) % num_2) % num_3) / 1000);
+            document.getElementById("showdays").innerHTML = " 本站已运行" + day + '天' + hour + '时' + minute + '分' + second + '秒';
+            document.getElementById("lovingdays").innerHTML ="和❤雯雯❤一起走过了 快"+lonvingdays+'天 |';
+        }, 1000);
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> 
+
+
+
+
+</body>
+
+</html>

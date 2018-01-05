@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="theme-color" content="#33474d">
+	<title>talk anything | Xavier</title>
+	
+	<link rel="stylesheet" href="/Jokevil.github.io/css/style.css" />
+	
+      <link rel="alternate" href="/atom.xml" title="Xavier" type="application/atom+xml">
+    
+  
+</head>
+
+<body>
+    
+	<header class="header">
+
+		<nav class="header__nav">
+			
+				<a href="/archives" class="header__link">Archive</a>
+			
+				<a href="/tags" class="header__link">Tags</a>
+			
+				<a href="/atom.xml" class="header__link">RSS</a>
+			
+		</nav>
+		<h1 class="header__title"><a href="/Jokevil.github.io/">Xavier</a></h1>
+		<h2 class="header__subtitle">tell you something about my story</h2>
+	</header>
+	<main>
+		<article>
+	
+		<h1>talk anything</h1>
+	
+	<div class="article__infos">
+		<span class="article__date">2017-09-05</span><br />
+		
+		
+	</div>
+
+	
+
+	
+		<p>#在遵义的学习总结</p>
+<h3 id="css-遇到的问题和知识点"><a href="#css-遇到的问题和知识点" class="headerlink" title="css 遇到的问题和知识点"></a>css 遇到的问题和知识点</h3><ul>
+<li>手机端点击输入框时的高亮属性<code>tap-highlight-color</code></li>
+<li>输入框自带边框 需<code>border：none</code></li>
+<li>边框还有<code>outline：none</code></li>
+<li><p>opacity 和z-index属性  子元素不能盖过父级的该属性等级   </p>
+</li>
+<li><h4 id="行内元素标签之间-换行会有空格间隙产生"><a href="#行内元素标签之间-换行会有空格间隙产生" class="headerlink" title="行内元素标签之间 换行会有空格间隙产生"></a>行内元素标签之间 换行会有空格间隙产生</h4><ol>
+<li>可采用display：inline-block；</li>
+<li>不换行</li>
+<li>父级元素font-size：0</li>
+<li>推荐浮动定位解决，font-size可继承，该父类下面的子类若有文字显示则显示为0px</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><h4 id="关于浮动定位"><a href="#关于浮动定位" class="headerlink" title="关于浮动定位"></a>关于浮动定位</h4><ol>
+<li>z-index属性才生效</li>
+<li>父级元素relative后 子类的absolute的层级z-index会被限制 子元素无论再高的层级 都只能和父级同级 </li>
+</ol>
+</li>
+<li><h4 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h4><p>父级盒子里的子元素 margin：0 auto居中后 再想距离父级盒子 margin-top：10px;<br>此时 父级盒子会跟着子元素一起下来10px； </p>
+</li>
+</ul>
+<a id="more"></a> 
+<ul>
+<li>解决办法：    </li>
+</ul>
+<ol>
+<li>在父级盒子里 加overflow：hidden  理解为子元素溢出？</li>
+<li>给父级盒子顶部一个依赖 border-top：1px solid transparent 透明！   </li>
+</ol>
+<ul>
+<li><h3 id="ul-li-实现li水平排列居中-》banner图的下方小圆点"><a href="#ul-li-实现li水平排列居中-》banner图的下方小圆点" class="headerlink" title="ul li 实现li水平排列居中 ==》banner图的下方小圆点"></a>ul li 实现li水平排列居中 ==》<em>banner图的下方小圆点</em></h3></li>
+<li>外层盒子relative 再调节 宽度100%  text-align:center  </li>
+<li>ul block</li>
+<li><p>li line-block 宽高自定<br>///////////详细例子见小米 内容版块 dot   </p>
+</li>
+<li><p>###问题： 有时候 hover 不到 a 标签  或者元素<br>解决方法：<br>检查: 该元素 有没有被 其他元素 无形之中 盖住<br>   可能是position：relative  它实际还是占原来的位置</p>
+</li>
+</ul>
+<h2 id="JS-知识点和遇到的问题"><a href="#JS-知识点和遇到的问题" class="headerlink" title="JS 知识点和遇到的问题"></a>JS 知识点和遇到的问题</h2><ul>
+<li>webstorm 全选相同代码 ctrl shift alt J</li>
+<li>Alt + J  选中下一个同样的词</li>
+<li><p>格式化代码  ctrl shift L</p>
+</li>
+<li><h4 id="操作DOM节点-的增删"><a href="#操作DOM节点-的增删" class="headerlink" title="操作DOM节点 的增删"></a>操作DOM节点 的增删</h4><p><code>body.removeChild(pDoms[lastNodeIndex]);</code><br>在删除节点的时候一定要找准<strong>父节点</strong>和<strong>要删除的节点</strong>  </p>
+</li>
+<li>XXX.firstChild  –&gt; 指的是该节点的第一个节点（任意节点 包括空的文本节点）</li>
+<li>XXX.firstElementChild 才是第一个<strong>元素</strong>节点</li>
+</ul>
+<hr>
+<ul>
+<li><h4 id="报错大全"><a href="#报错大全" class="headerlink" title="报错大全"></a>报错大全</h4></li>
+<li><h4 id="TypeError-banner-onmouseenter-is-not-a-function"><a href="#TypeError-banner-onmouseenter-is-not-a-function" class="headerlink" title="TypeError: banner.onmouseenter is not a function"></a><strong>TypeError:</strong> <code>banner.onmouseenter is not a function</code></h4>因为onmouseenter不是一个函数<br>不能用   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">onmouseenter(function()&#123;  </div><div class="line">  ...... </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>正确写法：<code>onmouseenter = (function(){  ......})</code>     </p>
+<ul>
+<li><h4 id="IIFE函数"><a href="#IIFE函数" class="headerlink" title="IIFE函数"></a><strong>IIFE函数</strong></h4>在   <code>(function(){</code> 在此行报错<br><code>})()</code><br>在末尾加了<code>;</code>或者在最头部加了<code>;</code>也好了  </li>
+<li><h4 id="函数调用和事件绑定"><a href="#函数调用和事件绑定" class="headerlink" title="函数调用和事件绑定"></a>函数调用和事件绑定</h4>eg:<br><code>btn.onmouseover=click();    //直接执行一遍 相当于调用一次</code><br><code>btn.onmouseover=click;      //将函数绑定给鼠标over事件 over事件触发时才执行函数</code></li>
+<li><h4 id="仿写音乐台时注意事项"><a href="#仿写音乐台时注意事项" class="headerlink" title="仿写音乐台时注意事项"></a>仿写音乐台时注意事项</h4><p>正确：<code>bannerSlideDoms[flag].className =&#39;bannerSlide&#39;;</code><br>错误：<code>bannerSlideDoms[flag].style.className =&#39;bannerSlide&#39;;</code></p>
+</li>
+<li><h4 id="小米banner滑动出现问题"><a href="#小米banner滑动出现问题" class="headerlink" title="小米banner滑动出现问题"></a>小米banner滑动出现问题</h4><p>.product-content-2{<br>position: relative;<br>.span9-box{   </p>
+</li>
+</ul>
+<p>hover没有向上移动的效果  是因为父级overflow ：hidden1！！！！！！<br>给父级加上padding-top:5px; 就好！！！！！！！！！！ </p>
+<h4 id="实现3D翻转效果-背景图一致显示不同内容"><a href="#实现3D翻转效果-背景图一致显示不同内容" class="headerlink" title="实现3D翻转效果 背景图一致显示不同内容"></a>实现3D翻转效果 背景图一致显示不同内容</h4><p> 两个同级div绝对定位在一起 可设置层级 选择谁在前<br>  第一个div front <code>backface-visibility:hidden</code><br>                 <code>transition: transform 1s ease</code><br>  第一个div 的父级 hover<br>                pd-star:hover .front{<br>                    transform: rotateY(180deg);<br>                }<br>  第二个div back  <code>backface-visibility: hidden;</code><br>                transform: rotateY(-180deg);  //实现无缝旋转的效果<br>                transition: transform 1s ease;<br>  第二个div 的父级 hover<br>                <code>.pd-star:hover .back{transform: rotateY(0deg);}</code>  </p>
+<h3 id="放大镜js"><a href="#放大镜js" class="headerlink" title="放大镜js"></a>放大镜js</h3><ol>
+<li>原理<br>用一个div（放大镜）放其同样的图 并将图放大2倍<code>background-size: a*2 px b*2 px;</code><br>用<code>mousemove</code>事件找到鼠标在相对于图片中的位置<br>-》 <code>e.clientX</code>(鼠标相对应浏览器的x轴位置) 减去 <code>this.offsetLeft</code>(这个元素 相对于浏览器的左边距)<br>-》 同理找到鼠标相对于图片中的位置 Y轴位置<br>代码：<br>var left = e.clientX - this.offsetLeft;<br>var top  = e.clientY - this.offsetTop;</li>
+</ol>
+<ol>
+<li><p>并将位置赋给 放大镜  再微调（减去放大镜宽高的一半）位置使其鼠标在放大镜中间<br>magnifyingDom.style.left = left-200 +’px’;<br>magnifyingDom.style.top = top -200+’px’;</p>
+</li>
+<li><p><strong>注意调节放大镜中 图像的位置</strong>/<em>为什么是负？</em>/<br>magnifyingDom.style.backgroundPositionX = -2<em>left +200+’px’;<br>magnifyingDom.style.backgroundPositionY = -2</em>top +200+’px’;</p>
+</li>
+</ol>
+<p>var width = this.offsetWidth;<br>var height = this.offsetHeight;<br><strong>判断鼠标移除图片外</strong><br><figure class="highlight plain"><figcaption><span>|| top <0 ||="" left="">width  || top>height)&#123;</0></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">   magnifyingDom.style.display = &apos;none&apos;;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="无缝轮播-总结"><a href="#无缝轮播-总结" class="headerlink" title="无缝轮播 总结"></a>无缝轮播 总结</h3><p><code>ul：margin-left ：0</code><br><code>li：transition： margin-left .8s ease</code><br><strong>点击右按钮 ：</strong><br>效果：li 标签总体 向左滑<br>分析：第一个li 右边 还有 li元素   </p>
+<ol>
+<li>给第一个li[0]标签<code>margin-left = -width px</code>  <strong>-&gt;效果总体左滑width px</strong>   </li>
+<li>设定一个 setTimeout<br>函数操作 第一个li[0]标签 添加到 ul父级 的末尾   -&gt;<br>时间设置为 transition 的过渡时间<br>ps：此时索引值改变  但是属性还是 <code>-width px</code>  </li>
+<li>将其末尾的li[last]（此时索引值改变）的 <code>margin-left =0；</code><br><strong>点击左按钮 ：</strong><br>效果：li 标签总体 向右滑<br>分析：第一个li 左边 无其他li元素  <strong>-&gt;无缝右移需要 左边有li元素</strong><br>所以   </li>
+<li>将末尾的li【1】 inserBefore到 li[0] 之前<br> ps:此时最后一个元素移动后 索引值 变为 0  </li>
+<li>将li[0] margin-left 值 = -width px</li>
+<li>设置 setTimeout 函数<br> 将li[0] margin-left 值 = 0<br>PS: <strong>重点！！！！：时间不设置 ==》默认直接触发</strong> </li>
+</ol>
+<hr>
+<h3 id="apply-和-call-详解"><a href="#apply-和-call-详解" class="headerlink" title="apply() 和 call()详解"></a>apply() 和 call()详解</h3><p>function add(a,b)<br>{<br>alert(a+b);<br>}<br>function sub(a,b)<br>{<br>alert(a-b);<br>}<br>add.call(sub,3,1);    // 4 “ sub 已经接过了add方法”<br>add.apply(sub,[3,1]);   // 4    sub借用add的方法  </p>
+<p><strong>“个人理解call和apply的作用就是切换函数的对象上下文。”</strong></p>
+<ul>
+<li>注意事项：<ol>
+<li>apply 方法调用 的 第二个参数必须是<strong>数组</strong> 或<strong>arguments 对象</strong>  </li>
+<li>apply 参数的列表 是对应一致的            </li>
+<li><strong>什么时候用apply 和 call</strong><br>–&gt;假设sub（name,age） add(name,age,sex)  可以用  sub.apply(add,arguments)<br>–&gt;若 sub（name,age） add(age,name,sex)   则要用 call  sub.call(add,name,age)<br>！！！！！》？<br>JavaScript 允许使用 任意 函数对象 的apply() 方法来调用该函数，并传递给它一个包含了参数的数组。</li>
+</ol>
+</li>
+</ul>
+<h3 id="apply和call的奇淫技巧"><a href="#apply和call的奇淫技巧" class="headerlink" title="apply和call的奇淫技巧"></a>apply和call的奇淫技巧</h3><ul>
+<li><h5 id="Math-max-可以实现得到数组中最大的一项"><a href="#Math-max-可以实现得到数组中最大的一项" class="headerlink" title="Math.max 可以实现得到数组中最大的一项"></a>Math.max 可以实现得到数组中最大的一项</h5>因为Math.max 参数里面不支持Math.max([param1,param2]) 也就是数组</li>
+</ul>
+<p>但是它支持Math.max(param1,param2,param3…),所以可以根据刚才apply的那个特点来解决 var max=Math.max.apply(null,array),这样轻易的可以得到一个数组中最大的一项</p>
+<p>(apply会将一个数组装换为一个参数接一个参数的传递给方法)</p>
+<p>这块在调用的时候第一个参数给了一个null,这个是因为没有对象去调用这个方法,我只需要用这个方法帮我运算,得到返回的结果就行,.所以直接传递了一个null过去</p>
+<ul>
+<li><h5 id="Math-min-可以实现得到数组中最小的一项"><a href="#Math-min-可以实现得到数组中最小的一项" class="headerlink" title="Math.min  可以实现得到数组中最小的一项"></a>Math.min  可以实现得到数组中最小的一项</h5></li>
+</ul>
+<p>同样和 max是一个思想 var min=Math.min.apply(null,array);</p>
+<ul>
+<li><h5 id="Array-prototype-push-可以实现两个数组合并"><a href="#Array-prototype-push-可以实现两个数组合并" class="headerlink" title="Array.prototype.push 可以实现两个数组合并"></a>Array.prototype.push 可以实现两个数组合并</h5></li>
+</ul>
+<p>同样push方法没有提供push一个数组,但是它提供了push(param1,param,…paramN) 所以同样也可以通过apply来装换一下这个数组,即:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">vararr1=new Array(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;);</div><div class="line">vararr2=new Array(&quot;4&quot;,&quot;5&quot;,&quot;6&quot;);</div><div class="line">Array.prototype.push.apply(arr1,arr2);</div></pre></td></tr></table></figure>
+<p>也可以这样理解,arr1调用了push方法,参数是通过apply将数组装换为参数列表的集合.</p>
+<p>通常在什么情况下,可以使用apply类似Math.min等之类的特殊用法:</p>
+<p>一般在目标函数只需要n个参数列表,而不接收一个数组的形式（[param1[,param2[,…[,paramN]]]]）,可以通过apply的方式巧妙地解决这个问题!</p>
+<p>奇淫技巧  </p>
+<ol>
+<li>Math.max 可以实现得到数组中最大的一项<br><code>console.log(Math.max.apply(null,[52,63,12]))  //63</code><br>奇淫技巧  </li>
+<li>Array.prototype.push 可以实现两个数组合并  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var a = [1,2,3],  </div><div class="line">   b = [4,5,6],  </div><div class="line">   c = Array.prototype.push.apply(a,b);    </div><div class="line">console.log(typeof c);  //6 Number类型 </div><div class="line">console.log(a,b);       // (6) [1, 2, 3, 4, 5, 6]  , (3) [4, 5, 6]</div></pre></td></tr></table></figure>
+</li>
+</ol>
+
+	
+
+	
+		<span class="different-posts"><a href="/Jokevil.github.io/2017/09/05/talk-anything/" onclick="window.history.go(-1); return false;">⬅️ Go back </a></span>
+
+	
+
+</article>
+
+
+	</main>
+	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=474944320&auto=1&height=430"></iframe>
+
+	<footer class="footer">
+	<div class="footer-content">
+		
+	      <div class="footer__element">
+	<p>Hi there, <br />welcome to my Blog, <br /> 
+	  thanks for watching<br /> 
+	  and having a good time. <br /> 
+	</p>
+</div>
+
+	    
+	      <div class="footer__element">
+	<h5>Check out</h5>
+	<ul class="footer-links"> 
+		<li class="footer-links__link"><a href="http://weibo.com/2677896252/profile?topnav=1&wvr=6&is_all=1">Sina </a></li> 
+	</ul>
+</div>
+
+	    
+
+		<div class="footer-credit">
+			<p>© 2018 Xavier </p>
+			<span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_pv"></span> 人次 |</span>
+			<span id="lovingdays"></span> 
+			<span id="showdays"></span> 
+		</div>
+	</div>
+</footer>
+<script>
+        const birthDay = new Date('5/18/2017 18:34:23');
+        const startDay = new Date('5/24/2016 00:05:24');
+        window.onload=setInterval(function() {
+            var now = new Date();
+            var num_1 = 1000 * 60 * 60 * 24;
+            var num_2 = 1000 * 60 * 60;
+            var num_3 = 1000 * 60;
+            var duration = now.getTime() - birthDay.getTime();
+            var love = now.getTime() - startDay.getTime();
+            var lonvingdays = Math.floor(love / num_1);
+            var day = Math.floor(duration / num_1);
+            var hour = Math.floor((duration % num_1) / num_2);
+            var minute = Math.floor(((duration % num_1) % num_2) / num_3);
+            var second = Math.floor((((duration % num_1) % num_2) % num_3) / 1000);
+            document.getElementById("showdays").innerHTML = " 本站已运行" + day + '天' + hour + '时' + minute + '分' + second + '秒';
+            document.getElementById("lovingdays").innerHTML ="和❤雯雯❤一起走过了 快"+lonvingdays+'天 |';
+        }, 1000);
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> 
+
+
+
+
+</body>
+
+</html>
