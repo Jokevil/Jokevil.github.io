@@ -17,17 +17,6 @@
   font-familiy: "Inconsolata";
   src: url("fonts/Inconsolata/Inconsolata-Regular.ttf");
 }
-video::-internal-media-controls-download-button {
-    display:none;
-}
-
-video::-webkit-media-controls-enclosure {
-    overflow:hidden;
-}
-
-video::-webkit-media-controls-panel {
-    width: calc(100% + 30px); 
-}
 html {
   font-size: 1em;
 }
