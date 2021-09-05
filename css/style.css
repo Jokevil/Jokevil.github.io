@@ -411,7 +411,9 @@ article .different-posts {
   src: url("fonts/Inconsolata/Inconsolata-Regular.ttf");
 }
 .header {
-  background-image: url("/img/each.png");
+  /*background-image: url("/img/each.png");*/
+  background-image: url("/img/each-mini.jpg");
+  /*background-image: url("https://sm.ms/image/2oXYtskiCg9pAWa");*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
